@@ -1,0 +1,21 @@
+// write your code here
+var img=new SimpleImage("hilton.jpg");
+var w=img.getWidth();
+print(w);
+for(var pix of img.values())
+{
+   
+    if(pix.getX()<=46)
+    {
+        pix.setRed(255);
+    }
+    else if(pix.getX()>46 & pix.getX()<=92)
+    {
+        pix.setGreen(255);
+    }
+    else
+    {
+        pix.setBlue(255);
+    }
+}
+print(img);

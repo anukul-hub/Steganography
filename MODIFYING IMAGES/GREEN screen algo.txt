@@ -1,0 +1,23 @@
+// write your code here
+var fimg=new SimpleImage("drewRobert.png");
+fimg.setSize(300,300);
+var bimg=new SimpleImage("chapel.png");
+bimg.setSize(300,300);
+var out=new SimpleImage(fimg.getWidth(),fimg.getHeight());
+for(var fpix of fimg.values())
+{
+    var x=fpix.getX();
+        var y=fpix.getY();
+    if(fpix.getGreen()> fpix.getRed() + fpix.getBlue())
+    {
+        
+        var bpix=bimg.getPixel(x,y);
+        out.setPixel(x,y,bpix);
+        
+    }
+    else
+    {
+        out.setPixel(x,y,fpix);
+    }
+}
+print(out);

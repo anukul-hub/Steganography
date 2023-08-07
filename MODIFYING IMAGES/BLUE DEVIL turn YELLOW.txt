@@ -1,0 +1,13 @@
+// write your code here
+var img=new SimpleImage("duke_blue_devil.png");
+for(var pix of img.values())
+{
+    if(pix.getGreen()==51)
+    {
+        pix.setRed(255);
+        pix.setGreen(255);
+        pix.setBlue(0);
+    }
+}
+
+print(img);

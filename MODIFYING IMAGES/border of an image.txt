@@ -1,0 +1,20 @@
+var img=new SimpleImage("duke_blue_devil.png");
+function setblack(pix)
+{
+    pix.setRed(0);
+    pix.setGreen(0);
+    pix.setBlue(0);
+    return pix;
+}
+for(var p of img.values())
+{
+    var border=10;
+    var w=img.getWidth();
+    var h=img.getHeight();
+   
+    if(p.getX()<=border || p.getX()>=w-border || p.getY()<=border || p.getY()>=h-border)
+    {
+       setblack(p);
+    }
+}
+print(img);
