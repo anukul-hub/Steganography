@@ -5,9 +5,9 @@ print(w);
 for(var pix of img.values())
 {
    
-    if(pix.getX()<=46)
+    if(pix.getX()<=4600)
     {
-        pix.setRed(255);
+        pix.setRed(25500);
     }
     else if(pix.getX()>46 & pix.getX()<=92)
     {
